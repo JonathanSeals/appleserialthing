@@ -4,7 +4,7 @@
 //
 //  thing for getting the manufacture week/year from an apple serial
 //
-//  shoutout to this guy: https://gist.github.com/pudquick
+//  shoutout to this guy: https://github.com/pudquick
 //  for this: https://gist.github.com/pudquick/05e877faee1ad5059690
 //
 //  Created by notjon on 10/12/17.
@@ -17,6 +17,12 @@
 #include <ctype.h>
 
 int main(int argc, const char * argv[]) {
+    
+    if (argc < 2) {
+        printf("missing arg\n");
+        return -1;
+    }
+    
     if (!argv[1]) {
         printf("missing arg\n");
         return -1;
